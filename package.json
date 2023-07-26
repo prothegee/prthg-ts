@@ -3,7 +3,10 @@
     "version": "1.0.0.20230726-ALPHA",
     "description": "prthg-ts typescript library",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no default test\" && exit 1",
+        "test::cjs": "node ./src/prthgts/test/main_test.js",
+        "test::umd": "node ./src/prthgts/test/main_test.umd.js",
+        "build": "rollup -c ./rollup.config.ts --bundleConfigAsCjs"
     },
     "repository": {
         "type": "git",
@@ -17,6 +20,14 @@
     },
     "homepage": "https://github.com/prothegee/prthg-ts#readme",
     "devDependencies": {
+        "@rollup/plugin-commonjs": "^25.0.3",
+        "@rollup/plugin-json": "^6.0.0",
+        "@rollup/plugin-node-resolve": "^15.1.0",
+        "@rollup/plugin-terser": "^0.4.3",
+        "@rollup/plugin-typescript": "^11.1.2",
+        "@typescript-eslint/eslint-plugin": "^6.2.0",
+        "@typescript-eslint/parser": "^6.2.0",
+        "eslint": "^8.45.0",
         "rollup": "^3.26.3",
         "tslib": "^2.6.1",
         "typescript": "^5.1.6"
