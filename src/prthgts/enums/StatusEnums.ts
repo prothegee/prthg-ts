@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace prthgts
 {
     // enum for status build
@@ -9,4 +10,4 @@ export namespace prthgts
         demo,
         production,
     }
-};
+}
