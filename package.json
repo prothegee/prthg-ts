@@ -1,0 +1,25 @@
+{
+    "name": "prthg-ts",
+    "version": "1.0.0.20230726-ALPHA",
+    "description": "prthg-ts typescript library",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/prothegee/prthg-ts.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/prothegee/prthg-ts/issues"
+    },
+    "homepage": "https://github.com/prothegee/prthg-ts#readme",
+    "devDependencies": {
+        "rollup": "^3.26.3",
+        "tslib": "^2.6.1",
+        "typescript": "^5.1.6"
+    },
+    "type": "module"
+}
