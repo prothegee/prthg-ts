@@ -20,8 +20,10 @@
     },
     "exclude": [
         "./node_modules/**",
-        "./src/**/*.min.js",
-        "./src/**/*.umd.js"
+        "./src/**/*.cc",
+        "./src/**/*.h",
+        "./src/prthgts/test/**/*.min.js",
+        "./src/prthgts/test/**/*.umd.js"
     ],
     "include": [
         "./src/**/*.d.ts",
