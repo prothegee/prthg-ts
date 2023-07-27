@@ -1,10 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import prthgts from "../prthgts";
+import prthgts from "../src/prthgts/prthgts";
 
 
 async function main()
 {
-    let errCount:number = 0;
+    let errCount = 0;
 
     prthgts.log.DEBUG("start test: prthts");
     console.log("-----------------------------------------------");
