@@ -1,11 +1,11 @@
 {
     "name": "prthg-ts",
-    "version": "1.0.0.20230727",
+    "version": "0.0.1.20230727",
     "description": "prthg-ts typescript library",
     "scripts": {
         "test": "echo \"Error: no default test\" && exit 1",
-        "test::cjs": "node ./src/prthgts/test/main_test.js",
-        "test::umd": "node ./src/prthgts/test/main_test.umd.js",
+        "test::cjs": "node ./test/main_test.js",
+        "test::umd": "node ./test/main_test.umd.js",
         "build": "rollup -c ./rollup.config.ts --bundleConfigAsCjs"
     },
     "repository": {
