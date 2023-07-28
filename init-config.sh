@@ -1,0 +1,1 @@
+cp ./src/prthgts/config.json.template ./src/prthgts/config.json;
