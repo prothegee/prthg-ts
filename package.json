@@ -1,6 +1,6 @@
 {
     "name": "prthg-ts",
-    "version": "0.0.1.20230727",
+    "version": "0.0.1.20230728",
     "description": "prthg-ts typescript library",
     "scripts": {
         "test": "echo \"Error: no default test\" && exit 1",
