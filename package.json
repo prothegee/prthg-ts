@@ -1,12 +1,14 @@
 {
     "name": "prthg-ts",
-    "version": "0.0.1.20230728",
+    "version": "0.0.1.20230731",
     "description": "prthg-ts typescript library",
     "scripts": {
-        "test": "echo \"Error: no default test\" && exit 1",
-        "test::cjs": "node ./test/main_test.js",
+        "test": "echo \"test keyword is reserved\" && exit 1",
+        "test::cjs": "node ./test/main_test.cjs",
         "test::umd": "node ./test/main_test.umd.js",
-        "build": "rollup -c ./rollup.config.ts --bundleConfigAsCjs"
+        "build": "echo \"build keyword is reserved\" && exit 1",
+        "build::test": "rollup -c ./configs/rollup.config.test.ts --bundleConfigAsCjs",
+        "_": "don't use me"
     },
     "repository": {
         "type": "git",
