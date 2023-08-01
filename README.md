@@ -10,15 +10,23 @@ prthg-ts typescript library
     - internal/dev as submodule
 
 - dependencies:
-    - [typescript](https://github.com/microsoft/TypeScript)
-    - [tslib](https://github.com/microsoft/tslib)
-    - [rollup](https://github.com/rollup/rollup)
-    - [rollup/plugin-commonjs](https://github.com/rollup/plugins/tree/master/packages/commonjs/#readme)
-    - [rollup/plugin-json](https://github.com/rollup/plugins/tree/master/packages/json/#readme)
-    - [rollup/plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve/#readme)
-    - [rollup/plugin-terser](https://github.com/rollup/plugins/tree/master/packages/terser/#readme)
-    - [rollup/plugin-typescript](https://github.com/rollup/plugins/tree/master/packages/typescript/#readme)
-    - [eslint](https://github.com/eslint/eslint)
+    - __required:__
+        - [cryptopp](https://github.com/weidai11/cryptopp) wasm32-emscripten triplet
+
+        - [emsdk](https://github.com/emscripten-core/emsdk)
+
+        - for nodejs dependencie, read _*package.json*_ file
+
+    - __optional:__
+        - [vcpkg](https://github.com/Microsoft/vcpkg)
+
+<br>
+
+---
+
+## contents
+
+- [cppport-wasm](./docs/cppport-wasm-EN.md)
 
 <br>
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cppport-wasm</title>
+</head>
+<body>
+    <script src="cppport-wasm.js"></script>
+    <script>
+        function encodeBase64(base64) {
+            const binString = atob(base64);
+            return Uint8Array.from(binString, (m) => m.codePointAt(0));
+        }
+
+        function decodeBase64(bytes) {
+            const binString = Array.from(bytes, (x) => String.fromCodePoint(x)).join("");
+            return btoa(binString);
+        }
+
+
+        Module.onRuntimeInitialized = async() => {
+            console.log("cppport-wasm: Started");
+
+
+            const email = "foo@bar.baz";
+
+            const password = "password123!";
+            const passwordSalt = "superSALT321!";
+
+            const message = "secret message #1 !";
+
+            // const iKeyXChaCha20 = "abcdefghijklmnopqrstuvwxyz123456"; // 32
+            // const iVecXChaCha20 = "abcdefghijklmnopqrstuvwx"; // 24
+            
+            // const iKeyAES = 123456789; // 9
+            // const iVecAES = 987654321; // 9
+            
+            const iKeyRC6 = 1234567891234567; // 16
+            const iVecRC6 = 9876543219876543; // 16
+
+
+            const GenerateSHA1 = Module.cwrap('GenerateSHA1', 'string', ['string']);
+            const GenerateSHA224 = Module.cwrap('GenerateSHA224', 'string', ['string']);
+            const GenerateSHA256 = Module.cwrap('GenerateSHA256', 'string', ['string']);
+            const GenerateSHA384 = Module.cwrap('GenerateSHA384', 'string', ['string']);
+            const GenerateSHA512 = Module.cwrap('GenerateSHA512', 'string', ['string']);
+            const GenerateBLAKE2b = Module.cwrap('GenerateBLAKE2b', 'string', ['string']);
+            const GenerateHasherSCRYPT = Module.cwrap('GenerateHasherSCRYPT', 'string', ['string','string']);
+
+
+            // const EncryptXChaCha20 = Module.cwrap('EncryptXChaCha20', 'string', ['string','string', 'string']);
+            // const DecryptXChaCha20 = Module.cwrap('DecryptXChaCha20', 'string', ['string','string', 'string']);
+
+            // const EncryptAES = Module.cwrap('EncryptAES', 'string', ['string','number', 'number']);
+            // const DecryptAES = Module.cwrap('DecryptAES', 'string', ['string','number', 'number']);
+
+            const EncryptRC6 = Module.cwrap('EncryptRC6', 'string', ['string','number','number']);
+            const DecryptRC6 = Module.cwrap('DecryptRC6', 'string', ['string','number','number']);
+
+
+            const SHA1 = GenerateSHA1(email);
+            console.log(`SHA1:\n${SHA1}`);
+
+            const SHA224 = GenerateSHA224(email);
+            console.log(`SHA224:\n${SHA224}`);
+
+            const SHA256 = GenerateSHA256(email);
+            console.log(`SHA256:\n${SHA256}`);
+
+            const SHA384 = GenerateSHA384(email);
+            console.log(`SHA384:\n${SHA384}`);
+
+            const SHA512 = GenerateSHA512(email);
+            console.log(`SHA512:\n${SHA512}`);
+
+            const BLAKE2b = GenerateBLAKE2b(email);
+            console.log(`BLAKE2b:\n${BLAKE2b}`);
+
+            const SCRYPT = GenerateHasherSCRYPT(password, passwordSalt);
+            console.log(`SCRYPT:\n${SCRYPT}`);
+
+
+            // const XChaCha20Enc = EncryptXChaCha20(message, iKeyXChaCha20, iVecXChaCha20); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
+            // console.log(`XChaCha20Enc:\n${XChaCha20Enc}`);
+
+            // const XChaChaDec = DecryptXChaCha20(XChaCha20Enc, iKeyXChaCha20, iVecXChaCha20); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
+            // console.log(`XChaChaDec:\n${XChaChaDec}`);
+
+
+            // const CbcAesEnc = EncryptAES(message, iKeyAES, iVecAES); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
+            // console.log(`CbcAesEnc:\n${CbcAesEnc}`);
+
+            // const CbcAesDec = DecryptAES(CbcAesEnc, iKeyAES, iVecAES); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
+            // console.log(`CbcAesDec:\n${CbcAesDec}`);
+
+
+            const RC6Enc = EncryptRC6(message, iKeyRC6, iVecRC6);
+            console.log(`RC6Enc:\n${RC6Enc}`);
+
+            const RC6Dec = DecryptRC6(RC6Enc, iKeyRC6, iVecRC6);
+            console.log(`RC6Dec:\n${RC6Dec}`);
+
+
+            console.log("cppport-wasm: Finished");
+        }
+    </script>
+</body>
+</html>

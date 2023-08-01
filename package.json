@@ -1,12 +1,16 @@
 {
     "name": "prthg-ts",
-    "version": "0.0.1.20230728",
+    "version": "0.1.0.20230801",
     "description": "prthg-ts typescript library",
     "scripts": {
-        "test": "echo \"Error: no default test\" && exit 1",
-        "test::cjs": "node ./test/main_test.js",
+        "test": "echo \"test keyword is reserved\" && exit 1",
+        "test::cjs": "node ./test/main_test.cjs",
         "test::umd": "node ./test/main_test.umd.js",
-        "build": "rollup -c ./rollup.config.ts --bundleConfigAsCjs"
+        "build": "echo \"build keyword is reserved\" && exit 1",
+        "build::test": "rollup -c ./configs/rollup.config.test.ts --bundleConfigAsCjs",
+        "watch": "echo \"watch keyword is reserved\" && exit 1",
+        "watch::cppport-wasm": "npx http-server ./static/cppport-wasm/ -p 8080",
+        "_": "don't use me"
     },
     "repository": {
         "type": "git",
@@ -25,9 +29,7 @@
         "@rollup/plugin-node-resolve": "^15.1.0",
         "@rollup/plugin-terser": "^0.4.3",
         "@rollup/plugin-typescript": "^11.1.2",
-        "@typescript-eslint/eslint-plugin": "^6.2.0",
-        "@typescript-eslint/parser": "^6.2.0",
-        "eslint": "^8.45.0",
+        "http-server": "^14.1.1",
         "rollup": "^3.26.3",
         "tslib": "^2.6.1",
         "typescript": "^5.1.6"

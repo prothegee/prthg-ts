@@ -9,7 +9,7 @@ import json from "@rollup/plugin-json";
 export const ConfigCjs = {
     source: "./test/main_test.ts",
     name: "main_test.ts",
-    target: "./test/main_test.js",
+    target: "./test/main_test.cjs",
 }
 export const TestCjs = {
     input: [
@@ -26,7 +26,7 @@ export const TestCjs = {
             browser: true,
             extensions: [
                 ".js",
-                ".ts"
+                ".ts",
             ]
         }),
         false && terser(),
@@ -34,7 +34,7 @@ export const TestCjs = {
         commonjs({
             extensions: [
                 ".js",
-                ".ts"
+                ".ts",
             ]
         }),
         json()
@@ -44,7 +44,7 @@ export const TestCjs = {
 const ConfigCjsMin = {
     source: "./test/main_test.ts",
     name: "main_test.min.js",
-    target: "./test/main_test.min.js",
+    target: "./test/main_test.min.cjs",
 }
 const TestCjsMin = {
     input: [
@@ -61,7 +61,7 @@ const TestCjsMin = {
             browser: true,
             extensions: [
                 ".js",
-                ".ts"
+                ".ts",
             ]
         }),
         true && terser(),
@@ -69,7 +69,7 @@ const TestCjsMin = {
         commonjs({
             extensions: [
                 ".js",
-                ".ts"
+                ".ts",
             ]
         }),
         json()
@@ -99,7 +99,7 @@ export const TestUmd = {
             browser: true,
             extensions: [
                 ".js",
-                ".ts"
+                ".ts",
             ]
         }),
         false && terser(),
@@ -107,7 +107,7 @@ export const TestUmd = {
         commonjs({
             extensions: [
                 ".js",
-                ".ts"
+                ".ts",
             ]
         }),
         json()
@@ -134,7 +134,7 @@ const TestUmdMin = {
             browser: true,
             extensions: [
                 ".js",
-                ".ts"
+                ".ts",
             ]
         }),
         true && terser(),
@@ -142,7 +142,7 @@ const TestUmdMin = {
         commonjs({
             extensions: [
                 ".js",
-                ".ts"
+                ".ts",
             ]
         }),
         json()

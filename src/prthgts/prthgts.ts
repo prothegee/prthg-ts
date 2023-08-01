@@ -1,19 +1,22 @@
-import * as prthgtsUTIL from "./classes/Utility";
-import * as prthgtsLOG from "./classes/Log";
+import CUtility from "./classes/Utility";
+import { EStatusBuild } from "./enums/StatusEnums";
 
 
 /**
  * @brief prthgts global access
 */
 const prthgts = {
+//#region classes
     /**
-     * @brief prthgts utils access
+     * @brief prthgts utility access
     */
-    utils: new prthgtsUTIL.prthgts.CUtility(),
-    /**
-     * @brief prthgts log class access
-    */
-    log: new prthgtsLOG.prthgts.CLog()
+    util: new CUtility(),
+//#endregion
+//#region enums
+    enum: {
+        EStatusBuild: EStatusBuild
+    }
+//#endregion
 }
 
 
