@@ -22,16 +22,15 @@
         "./node_modules/**",
         "./src/**/*.cc",
         "./src/**/*.h",
-        "./src/test/**/*.cjs",
-        "./src/test/**/*.min.js",
-        "./src/test/**/*.min.js",
-        "./src/test/**/*.umd.js"
+        "./src/**/*.cjs",
+        "./src/**/*.min.js",
+        "./src/**/*.min.js",
+        "./src/**/*.umd.js",
     ],
     "include": [
         "./src/**/*.d.ts",
         "./src/**/*.ts",
         "./src/**/*.js",
         "./src/**/*.wasm",
-        "./test/**/*.ts",
     ]
 }

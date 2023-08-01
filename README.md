@@ -10,31 +10,23 @@ prthg-ts typescript library
     - internal/dev as submodule
 
 - dependencies:
-    - [cryptopp](https://github.com/weidai11/cryptopp)
+    - __required:__
+        - [cryptopp](https://github.com/weidai11/cryptopp) wasm32-emscripten triplet
 
-    - for nodejs dependencie, read _*package.json*_ file
+        - [emsdk](https://github.com/emscripten-core/emsdk)
+
+        - for nodejs dependencie, read _*package.json*_ file
+
+    - __optional:__
+        - [vcpkg](https://github.com/Microsoft/vcpkg)
 
 <br>
 
 ---
 
-## build & watch
+## contents
 
-```
-# configure
-emcmake cmake . -B build/wasm -G Ninja -DINC_VCPKG=true -DINC_VCPKG_DIR=D:/vcpkg -DINC_EMSDK=true -DINC_EMSDK_DIR=D:/emsdk -Dcryptopp_DIR=D:/vcpkg/packages/cryptopp_wasm32-emscripten/share/cryptopp;
-
-# build
-cmake --build ./build/wasm;
-
-# then
-cp ./build/wasm/cppport-wasm.js ./static/cppport-wasm/cppport-wasm.js;
-cp ./build/wasm/cppport-wasm.wasm ./static/cppport-wasm/cppport-wasm.wasm;
-cp ./static/cppport-wasm/test.html.template ./static/cppport-wasm/index.html
-
-npm i;
-npm run watch::cppport-wasm;
-```
+- [cppport-wasm](./docs/cppport-wasm-EN.md)
 
 <br>
 

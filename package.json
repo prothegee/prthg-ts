@@ -1,6 +1,6 @@
 {
     "name": "prthg-ts",
-    "version": "0.0.1.20230731",
+    "version": "0.1.0.20230801",
     "description": "prthg-ts typescript library",
     "scripts": {
         "test": "echo \"test keyword is reserved\" && exit 1",
@@ -29,9 +29,6 @@
         "@rollup/plugin-node-resolve": "^15.1.0",
         "@rollup/plugin-terser": "^0.4.3",
         "@rollup/plugin-typescript": "^11.1.2",
-        "@typescript-eslint/eslint-plugin": "^6.2.0",
-        "@typescript-eslint/parser": "^6.2.0",
-        "eslint": "^8.45.0",
         "http-server": "^14.1.1",
         "rollup": "^3.26.3",
         "tslib": "^2.6.1",

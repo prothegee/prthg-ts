@@ -29,10 +29,13 @@
             const passwordSalt = "superSALT321!";
 
             const message = "secret message #1 !";
-            const iKeyXChaCha20 = "abcdefghijklmnopqrstuvwxyz123456"; // 32
-            const iVecXChaCha20 = "abcdefghijklmnopqrstuvwx"; // 24
-            const iKeyAES = 123456789; // 9
-            const iVecAES = 987654321; // 9
+
+            // const iKeyXChaCha20 = "abcdefghijklmnopqrstuvwxyz123456"; // 32
+            // const iVecXChaCha20 = "abcdefghijklmnopqrstuvwx"; // 24
+            
+            // const iKeyAES = 123456789; // 9
+            // const iVecAES = 987654321; // 9
+            
             const iKeyRC6 = 1234567891234567; // 16
             const iVecRC6 = 9876543219876543; // 16
 
@@ -46,11 +49,11 @@
             const GenerateHasherSCRYPT = Module.cwrap('GenerateHasherSCRYPT', 'string', ['string','string']);
 
 
-            const EncryptXChaCha20 = Module.cwrap('EncryptXChaCha20', 'string', ['string','string', 'string']);
-            const DecryptXChaCha20 = Module.cwrap('DecryptXChaCha20', 'string', ['string','string', 'string']);
+            // const EncryptXChaCha20 = Module.cwrap('EncryptXChaCha20', 'string', ['string','string', 'string']);
+            // const DecryptXChaCha20 = Module.cwrap('DecryptXChaCha20', 'string', ['string','string', 'string']);
 
-            const EncryptAES = Module.cwrap('EncryptAES', 'string', ['string','number', 'number']);
-            const DecryptAES = Module.cwrap('DecryptAES', 'string', ['string','number', 'number']);
+            // const EncryptAES = Module.cwrap('EncryptAES', 'string', ['string','number', 'number']);
+            // const DecryptAES = Module.cwrap('DecryptAES', 'string', ['string','number', 'number']);
 
             const EncryptRC6 = Module.cwrap('EncryptRC6', 'string', ['string','number','number']);
             const DecryptRC6 = Module.cwrap('DecryptRC6', 'string', ['string','number','number']);
@@ -78,7 +81,6 @@
             console.log(`SCRYPT:\n${SCRYPT}`);
 
 
-
             // const XChaCha20Enc = EncryptXChaCha20(message, iKeyXChaCha20, iVecXChaCha20); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
             // console.log(`XChaCha20Enc:\n${XChaCha20Enc}`);
 
@@ -86,10 +88,10 @@
             // console.log(`XChaChaDec:\n${XChaChaDec}`);
 
 
-            // const CbcAesEnc = EncryptAES(message, initializeKeyIntAes, initializeVectorIntAes); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
+            // const CbcAesEnc = EncryptAES(message, iKeyAES, iVecAES); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
             // console.log(`CbcAesEnc:\n${CbcAesEnc}`);
 
-            // const CbcAesDec = DecryptAES(CbcAesEnc, initializeKeyIntAes, initializeVectorIntAes); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
+            // const CbcAesDec = DecryptAES(CbcAesEnc, iKeyAES, iVecAES); // Invalid UTF-8 leading byte <0x....> encountered when deserializing a UTF-8 string in wasm memory to a JS string!
             // console.log(`CbcAesDec:\n${CbcAesDec}`);
 
 
