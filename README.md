@@ -9,16 +9,22 @@ prthg-ts typescript library
 - status:
     - internal/dev as submodule
 
+- [license](./LICENSE.md)
+
+- [changelog](./CHANGELOG.md)
+
+- [contributors](./CONTRIBUTORS.md)
+
 - dependencies:
     - __required:__
         - [cryptopp](https://github.com/weidai11/cryptopp) wasm32-emscripten triplet
 
         - [emsdk](https://github.com/emscripten-core/emsdk)
 
-        - for nodejs dependencie, read _*package.json*_ file
+        - [node modules](./package.json)
 
     - __optional:__
-        - [vcpkg](https://github.com/Microsoft/vcpkg)
+        - N/A
 
 <br>
 
@@ -27,6 +33,16 @@ prthg-ts typescript library
 ## contents
 
 - [cppport-wasm](./docs/cppport-wasm-EN.md)
+
+<br>
+
+- [classes](https://github.com/prothegee/prthg-ts/tree/main/src/prthgts/classes)
+
+- [enums](https://github.com/prothegee/prthg-ts/tree/main/src/prthgts/enums)
+
+<!-- - [interfaces](https://github.com/prothegee/prthg-ts/tree/main/src/prthgts/interfaces) -->
+
+<!-- - [types](https://github.com/prothegee/prthg-ts/tree/main/src/prthgts/types) -->
 
 <br>
 

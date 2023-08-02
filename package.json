@@ -1,6 +1,6 @@
 {
     "name": "prthg-ts",
-    "version": "0.1.0.20230801",
+    "version": "0.1.0.20230803",
     "description": "prthg-ts typescript library",
     "scripts": {
         "test": "echo \"test keyword is reserved\" && exit 1",
@@ -17,7 +17,7 @@
         "url": "git+https://github.com/prothegee/prthg-ts.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Prana Ron @prothegee (prothegee@protonmail.com)",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/prothegee/prthg-ts/issues"
@@ -34,5 +34,8 @@
         "tslib": "^2.6.1",
         "typescript": "^5.1.6"
     },
-    "type": "module"
+    "type": "module",
+    "contributors": [
+        "Prana Ron @prothegee (prothegee@protonmail.com)"
+    ]
 }

@@ -1,4 +1,6 @@
-// enum for status build
+/**
+ * @brief enum status build
+*/
 export enum EStatusBuild
 {
     undefined = 0,
