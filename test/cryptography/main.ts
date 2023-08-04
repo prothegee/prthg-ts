@@ -1,42 +1,4 @@
-import prthgts from "../src/prthgts/prthgts";
 import * as CryptographyFunctions from "./cppport-wasm.js";
-
-
-async function RunTestUtilityClass()
-{
-    console.log("Test CUtilty: Started\n");
-
-
-    const util = prthgts.util;
-
-    console.log("Generate Random Alphanumeric:");
-    for (let i = 0; i < 10; i++)
-    {
-        console.log(`${util.GenerateRandomAlphanumeric(i)}`);
-    }
-
-    console.log("\nGenerate Random UUID:");
-    for (let i = 0; i < 10; i++)
-    {
-        const uuid = util.GenerateRandomUUID();
-        console.log(`${uuid}\n${util.ChangeInputLetterCase(uuid, 0)}\n${util.ChangeInputLetterCase(uuid, 1)}\n${util.ChangeInputLetterCase(uuid, 2)}\n`);
-    }
-
-    const t1 = "wqeasd";
-    if (util.CheckInputIsAlphabetic(t1))
-    {
-        console.log(`${t1} is alphabetic\n`);
-    }
-
-    const t2 = "asdzxc123456";
-    if (util.CheckInputIsAlphaNumeric(t2))
-    {
-        console.log(`${t2} is alphanumeric\n`);
-    }
-
-
-    console.log("Test CUtilty: Finished\n");
-}
 
 
 async function RunTestCryptographyClass()
@@ -167,7 +129,6 @@ async function RunTestCryptographyClass()
 async function main()
 {
     await RunTestCryptographyClass();
-    await RunTestUtilityClass();
 }
 
 
