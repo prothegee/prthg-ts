@@ -7,9 +7,9 @@ import json from "@rollup/plugin-json";
 
 //#region cjs
 export const ConfigCjs = {
-    source: "./test/main_test.ts",
-    name: "main_test.ts",
-    target: "./test/main_test.cjs",
+    source: "./test/cryptography/main.ts",
+    name: "main.ts",
+    target: "./test/cryptography/main.cjs",
 }
 export const TestCjs = {
     input: [
@@ -42,9 +42,9 @@ export const TestCjs = {
 }
 
 const ConfigCjsMin = {
-    source: "./test/main_test.ts",
-    name: "main_test.min.js",
-    target: "./test/main_test.min.cjs",
+    source: "./test/cryptography/main.ts",
+    name: "main.min.js",
+    target: "./test/cryptography/main.min.cjs",
 }
 const TestCjsMin = {
     input: [
@@ -80,9 +80,9 @@ const TestCjsMin = {
 
 //#region umd
 export const ConfigUmd = {
-    source: "./test/main_test.ts",
-    name: "main_test.umd.ts",
-    target: "./test/main_test.umd.js",
+    source: "./test/cryptography/main.ts",
+    name: "main.umd.ts",
+    target: "./test/cryptography/main.umd.js",
 }
 export const TestUmd = {
     input: [
@@ -115,9 +115,9 @@ export const TestUmd = {
 }
 
 const ConfigUmdMin = {
-    source: "./test/main_test.ts",
-    name: "main_test.umd.min.js",
-    target: "./test/main_test.umd.min.js",
+    source: "./test/cryptography/main.ts",
+    name: "main.umd.min.js",
+    target: "./test/cryptography/main.umd.min.js",
 }
 const TestUmdMin = {
     input: [

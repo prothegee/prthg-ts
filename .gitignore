@@ -46,11 +46,11 @@
 ##
 ## test
 ##
-/test/*.js
-/test/*.js.map
-/test/*.cjs
-/test/*.cjs.map
-/test/*.wasm
-/test/*-wasm
+/test/**/*.js
+/test/**/*.js.map
+/test/**/*.cjs
+/test/**/*.cjs.map
+/test/**/*.wasm
+/test/**/*-wasm
 
 /static/cppport-wasm/index.html

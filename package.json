@@ -1,13 +1,13 @@
 {
     "name": "prthg-ts",
-    "version": "0.1.0.20230803",
+    "version": "0.1.0.20230804",
     "description": "prthg-ts typescript library",
     "scripts": {
         "test": "echo \"test keyword is reserved\" && exit 1",
-        "test::cjs": "node ./test/main_test.cjs",
-        "test::umd": "node ./test/main_test.umd.js",
+        "test::cryptography::cjs": "node ./test/cryptography/main.cjs",
+        "test::cryptography::umd": "node ./test/cryptography/main.umd.js",
         "build": "echo \"build keyword is reserved\" && exit 1",
-        "build::test": "rollup -c ./configs/rollup.config.test.ts --bundleConfigAsCjs",
+        "build::cryptography::test": "rollup -c ./configs/config.cryptography.test.ts --bundleConfigAsCjs",
         "watch": "echo \"watch keyword is reserved\" && exit 1",
         "watch::cppport-wasm": "npx http-server ./static/cppport-wasm/ -p 8080",
         "_": "don't use me"
