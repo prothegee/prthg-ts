@@ -1,5 +1,10 @@
 import { EDateAndTimeFormat } from "../enums/DateEnums";
 
+
+/**
+ * @brief prthgts date and time class
+ * 
+ */
 export default class CDateAndTime
 {
     /**
