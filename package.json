@@ -1,6 +1,7 @@
 {
     "name": "prthg-ts",
-    "version": "0.1.0.20230804",
+    "version": "0.1.0",
+    "full_version": "0.1.0.20230804",
     "description": "prthg-ts typescript library",
     "scripts": {
         "test": "echo \"test keyword is reserved\" && exit 1",
